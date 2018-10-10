@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd 
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+        
+        <context:component-scan base-package="com.nasoto.tiendavirtual">
+        	<context:exclude-filter type="regex" expression="com.nasoto.tiendavirtual.web.controler" />
+        </context:component-scan>
+        
+        <context:annotation-config/>
+        
+        <import resource="classpath:/spring/datasources/oracle-datasource-application-context.xml" />
+        
+        <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        	<property name="dataSource" ref="datasource"/>
+			<property name="packagesToScan" value="com.nasoto.tiendavirtual.entities"/>
+			<property name="hibernateProperties">
+				<props>
+					<prop key="hibernate.show_sql">true</prop>
+					<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				</props>
+			</property>
+		</bean>
+        
+        <!-- Define TransactionManager - HibernateTransactionManager -->
+		<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+			<property name="sessionFactory" ref="sessionFactory"/>
+		</bean>
+
+		<!-- Define transaccionabilidad dirigida por anotaciones -->
+		<tx:annotation-driven transaction-manager="transactionManager"/>
+        
+</beans>

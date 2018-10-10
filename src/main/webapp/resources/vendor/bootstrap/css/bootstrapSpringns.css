@@ -1,0 +1,99 @@
+.navbar-springns {
+  background-color: #34302d;
+  border-color: #6db33f;
+}
+.navbar-springns .navbar-brand {
+  color: #eeeeee;
+}
+.navbar-springns .navbar-brand:hover,
+.navbar-springns .navbar-brand:focus {
+  color: #eeeeee;
+  /*
+  	Este atributo no lo genera el customizador
+  	https://work.smarchal.com/twbscolor/css
+  */
+  background-color: transparent;  
+}
+.navbar-springns .navbar-text {
+  color: #eeeeee;
+}
+.navbar-springns .navbar-nav > li > a {
+  color: #eeeeee;
+}
+.navbar-springns .navbar-nav > li > a:hover,
+.navbar-springns .navbar-nav > li > a:focus {
+  color: #eeeeee;
+  /*
+  	Este atributo no lo genera el customizador
+  	https://work.smarchal.com/twbscolor/css
+  */
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-nav > li > .dropdown-menu {
+  background-color: #34302d;
+}
+.navbar-springns .navbar-nav > li > .dropdown-menu > li > a {
+  color: #eeeeee;
+}
+.navbar-springns .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-springns .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #eeeeee;
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-springns .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-springns .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #eeeeee;
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-nav > .active > a,
+.navbar-springns .navbar-nav > .active > a:hover,
+.navbar-springns .navbar-nav > .active > a:focus {
+  color: #eeeeee;
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-nav > .open > a,
+.navbar-springns .navbar-nav > .open > a:hover,
+.navbar-springns .navbar-nav > .open > a:focus {
+  color: #eeeeee;
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-toggle {
+  border-color: #6db33f;
+}
+.navbar-springns .navbar-toggle:hover,
+.navbar-springns .navbar-toggle:focus {
+  background-color: #6db33f;
+}
+.navbar-springns .navbar-toggle .icon-bar {
+  background-color: #eeeeee;
+}
+.navbar-springns .navbar-collapse,
+.navbar-springns .navbar-form {
+  border-color: #eeeeee;
+}
+.navbar-springns .navbar-link {
+  color: #eeeeee;
+}
+.navbar-springns .navbar-link:hover {
+  color: #eeeeee;
+}
+
+@media (max-width: 767px) {
+  .navbar-springns .navbar-nav .open .dropdown-menu > li > a {
+    color: #eeeeee;
+  }
+  .navbar-springns .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-springns .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #eeeeee;
+  }
+  .navbar-springns .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-springns .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-springns .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #eeeeee;
+    background-color: #6db33f;
+  }
+}
